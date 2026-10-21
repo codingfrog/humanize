@@ -80,6 +80,8 @@ import humanize
         ([1.123456789, False, True], "1B"),
         ([1.123456789 * 10**3, False, True], "1.1K"),
         ([1.123456789 * 10**6, False, True], "1.1M"),
+        (["300"], "300 Bytes"),
+        ([300.9, False, True], "300B"),
         # Rounding must not leave the mantissa at the base while a larger suffix
         # is available: 999999 is 999.999 kB, which the "%.1f" format rounds to
         # 1000.0 and must carry into 1.0 MB rather than render as "1000.0 kB".
